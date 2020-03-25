@@ -38,7 +38,7 @@ class EnqueueSerializerTest extends TestCase
 
         $serializedCommand = $serializer->serialize($command);
 
-        $this->assertInternalType('string', $serializedCommand);
+        $this->assertIsString($serializedCommand);
 
         $unserializedCommand = $serializer->unserialize($serializedCommand);
 
@@ -57,7 +57,7 @@ class EnqueueSerializerTest extends TestCase
 
         $serializedEvent = $serializer->serialize($event);
 
-        $this->assertInternalType('string', $serializedEvent);
+        $this->assertIsString($serializedEvent);
 
         $unserializedEvent = $serializer->unserialize($serializedEvent);
 
@@ -76,7 +76,7 @@ class EnqueueSerializerTest extends TestCase
 
         $serializedQuery = $serializer->serialize($query);
 
-        $this->assertInternalType('string', $serializedQuery);
+        $this->assertIsString($serializedQuery);
 
         $unserializedQuery = $serializer->unserialize($serializedQuery);
 
